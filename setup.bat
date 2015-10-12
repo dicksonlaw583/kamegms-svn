@@ -15,8 +15,8 @@ echo OK
 
 :: Add registry entries
 <NUL set /p ".=Adding registry entries... "
-reg add "HKCU\Software\GMStudio\Version 1.0\Preferences" /v 5tudioSCMConfigFile /t REG_SZ /d "%cd%\kamesvn.scmconfig.xml" /f >NUL 2>NUL || goto :failed_registry
-reg add "HKCU\Software\GMStudio\Version 1.0\Preferences" /v SVNExeLocation /t REG_SZ /d "%cd%\kamesvn.bat" /f >NUL 2>NUL || goto :failed_registry
+reg add "HKCU\Software\GMStudio\Version 1.0\Preferences" /v 5tudioSCMConfigFile /t REG_SZ /d "%~dp0kamesvn.scmconfig.xml" /f >NUL 2>NUL || goto :failed_registry
+reg add "HKCU\Software\GMStudio\Version 1.0\Preferences" /v SVNExeLocation /t REG_SZ /d "%~dp0kamesvn.bat" /f >NUL 2>NUL || goto :failed_registry
 reg add "HKCU\Software\GMStudio\Version 1.0\Preferences" /v SVNExeChoice /t REG_DWORD /d 2 /f >NUL 2>NUL || goto :failed_registry
 reg add "HKCU\Software\GMStudio\Version 1.0\Preferences" /v SCMAdvancedOptions /t REG_DWORD /d 1 /f >NUL 2>NUL || goto :failed_registry
 reg add "HKCU\Software\GMStudio\Version 1.0\Preferences" /v SCMColours /t REG_DWORD /d 1 /f >NUL 2>NUL || goto :failed_registry
