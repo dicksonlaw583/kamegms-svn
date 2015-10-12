@@ -1,0 +1,213 @@
+<SCM_Config>
+  <SCM_Commands>
+    <pre-add></pre-add>
+    <add>add</add>
+    <post-add></post-add>
+    <pre-blame></pre-blame>
+    <blame>blame</blame>
+    <post-blame></post-blame>
+    <pre-changelog></pre-changelog>
+    <changelog>log</changelog>
+    <post-changelog></post-changelog>
+    <pre-checkout></pre-checkout>
+    <checkout>checkout</checkout>
+    <post-checkout></post-checkout>
+    <pre-clean></pre-clean>
+    <clean>cleanup</clean>
+    <post-clean></post-clean>
+    <pre-commit></pre-commit>
+    <commit>commit</commit>
+    <post-commit></post-commit>
+    <pre-delete></pre-delete>
+    <delete>delete</delete>
+    <post-delete></post-delete>
+    <pre-info></pre-info>
+    <info>info</info>
+    <post-info></post-info>
+    <pre-import></pre-import>
+    <import>import</import>
+    <post-import>postimport</post-import>
+    <pre-lock></pre-lock>
+    <lock>lock</lock>
+    <post-lock></post-lock>
+    <pre-rename></pre-rename>
+    <rename>rename</rename>
+    <post-rename></post-rename>
+    <pre-resolve></pre-resolve>
+    <resolve>resolve</resolve>
+    <post-resolve></post-resolve>
+    <pre-resolved></pre-resolved>
+    <resolved>resolved</resolved>
+    <post-resolved></post-resolved>
+    <pre-revert></pre-revert>
+    <revert>revert</revert>
+    <post-revert></post-revert>
+    <pre-revision-revert></pre-revision-revert>
+    <revision-revert>merge</revision-revert>
+    <post-revision-revert></post-revision-revert>
+    <pre-showlog></pre-showlog>
+    <showlog>log</showlog>
+    <post-showlog></post-showlog>
+    <pre-status></pre-status>
+    <status>status</status>
+    <post-status></post-status>
+    <pre-unlock></pre-unlock>
+    <unlock>unlock</unlock>
+    <post-unlock></post-unlock>
+    <pre-update></pre-update>
+    <update>update</update>
+    <post-update></post-update>
+  </SCM_Commands>
+  <SCM_Command_Options>
+    <pre-add></pre-add>
+    <add>$FILE --parents --force --non-interactive</add>
+    <post-add></post-add>
+    <pre-blame></pre-blame>
+    <blame>$FILE --non-interactive</blame>
+    <post-blame></post-blame>
+    <pre-changelog></pre-changelog>
+    <changelog>-r $REVISION --verbose --non-interactive</changelog>
+    <post-changelog></post-changelog>
+    <pre-checkout></pre-checkout>
+    <checkout>$SERVERURL $PATH --username $USERNAME --password $PASSWORD --non-interactive</checkout>
+    <post-checkout></post-checkout>
+    <pre-clean></pre-clean>
+    <clean></clean>
+    <post-clean></post-clean>
+    <pre-commit></pre-commit>
+    <commit>$FILE -m $MESSAGE --username $USERNAME --password $PASSWORD --non-interactive</commit>
+    <post-commit></post-commit>
+    <pre-delete></pre-delete>
+    <delete>$FILE --force --non-interactive</delete>
+    <post-delete></post-delete>
+    <pre-info></pre-info>
+    <info></info>
+    <post-info></post-info>
+    <pre-import></pre-import>
+    <import>$SERVERURL -m $MESSAGE --username $USERNAME --password $PASSWORD --depth=empty --non-interactive</import>
+    <post-import>$SERVERURL $USERNAME $PASSWORD</post-import>
+    <pre-lock></pre-lock>
+    <lock>$FILE --non-interactive</lock>
+    <post-lock></post-lock>
+    <pre-rename></pre-rename>
+    <rename>$FILE $RENAMED --non-interactive</rename>
+    <post-rename></post-rename>
+    <pre-resolve></pre-resolve>
+    <resolve>--accept=working $FILE --non-interactive</resolve>
+    <resolve-mine>--accept=mine-full $FILE --non-interactive</resolve-mine>
+    <resolve-theirs>--accept=theirs-full $FILE --non-interactive</resolve-theirs>
+    <post-resolve></post-resolve>
+    <pre-resolved></pre-resolved>
+    <resolved>$FILE --non-interactive</resolved>
+    <post-resolved></post-resolved>
+    <pre-revert></pre-revert>
+    <revert>$FILE --depth=infinity --non-interactive</revert>
+    <post-revert></post-revert>
+    <pre-revision-revert>$FILE --non-interactive</pre-revision-revert>
+    <revision-revert>-r HEAD:$REVISION $FILE --non-interactive</revision-revert>
+    <post-revision-revert></post-revision-revert>
+    <pre-showlog></pre-showlog>
+    <showlog></showlog>
+    <post-showlog></post-showlog>
+    <pre-status></pre-status>
+    <status>$FILE --depth=files --non-interactive</status>
+    <post-status></post-status>
+    <pre-unlock></pre-unlock>
+    <unlock>$FILE --non-interactive</unlock>
+    <post-unlock></post-unlock>
+    <pre-update></pre-update>
+    <update>$FILE --username $USERNAME --password $PASSWORD --non-interactive</update>
+    <post-update></post-update>
+    <status-all>$FILE</status-all>
+  </SCM_Command_Options>
+  <SCM_External_Tools>
+    <mergetool>TortoiseProc</mergetool>
+  </SCM_External_Tools>
+  <SCM_External_Tools_Options>
+    <mergetool>/command:conflicteditor /path:$merged</mergetool>
+  </SCM_External_Tools_Options>
+  <SCM_StatusLog_Headers>
+    <status>Status</status>
+    <props>Properties</props>
+    <locked>Locked</locked>
+    <history>History</history>
+    <switched>Switched</switched>
+    <lock-info>Lock Info</lock-info>
+    <tree-conflict>Tree Conflict</tree-conflict>
+    <out-of-date>Out of Date</out-of-date>
+    <filepath>FilePath</filepath>
+  </SCM_StatusLog_Headers>
+  <SCM_StatusLog_Format>
+    <status> ,A,D,M,R,C,X,I,?,!,~</status>
+    <props> ,M,C</props>
+    <locked> ,L</locked>
+    <history> ,+</history>
+    <switched> ,S</switched>
+    <lock-info> ,K,O,T,B</lock-info>
+    <tree-conflict> ,C</tree-conflict>
+    <out-of-date> ,*</out-of-date>
+    <filepath>$projectpath</filepath>
+  </SCM_StatusLog_Format>
+  <SCM_StatusLog_Codes>
+    <Unmodified></Unmodified>
+    <Modified>M</Modified>
+    <Added>A</Added>
+    <Deleted>D</Deleted>
+    <Replaced>R</Replaced>
+    <Updated></Updated>
+    <External>X</External>
+    <Ignored>I</Ignored>
+    <Unversioned>?</Unversioned>
+    <Missing>!</Missing>
+    <Wrong-Type>~</Wrong-Type>
+    <Copied></Copied>
+    <Clean></Clean>
+    <Conflicted>C</Conflicted>
+  </SCM_StatusLog_Codes>
+  <SCM_Common_Functions>
+    <RefreshAll>Refresh</RefreshAll>
+    <AddAll>Add All</AddAll>
+    <Revert>Revert</Revert>
+    <RevertAll>Revert All</RevertAll>
+  </SCM_Common_Functions>
+  <SCM_Additional_Functions>
+    <menu-update>Update to Revision...</menu-update>
+    <menu-blame>Blame</menu-blame>
+    <menu-diff>Diff</menu-diff>
+    <none1>==========</none1>
+    <menu-console>Console</menu-console>
+    <menu-repobrowser>Repo Browser</menu-repobrowser>
+    <menu-updateall>Update All to Revision...</menu-updateall>
+    <menu-switch>Switch to...</menu-switch>
+    <menu-branch>Branch/Tag...</menu-branch>
+    <menu-merge>Merge...</menu-merge>
+    <menu-createpatch>Create Patch</menu-createpatch>
+    <menu-applypatch>Apply Patch...</menu-applypatch>
+    <menu-clean>Clean up</menu-clean>
+    <none2>==========</none2>
+    <menu-lock>Lock</menu-lock>
+    <menu-unlock>Unlock</menu-unlock>
+    <menu-properties>Properties...</menu-properties>
+    <menu-revgraph>Revision Graph</menu-revgraph>
+  </SCM_Additional_Functions>
+  <SCM_Additional_Function_Options>
+    <menu-update>$FILE</menu-update>
+    <menu-blame>$FILE</menu-blame>
+    <menu-diff>$FILE</menu-diff>
+    <none1></none1>
+    <menu-console></menu-console>
+    <menu-repobrowser>$FILE</menu-repobrowser>
+    <menu-updateall></menu-updateall>
+    <menu-switch></menu-switch>
+    <menu-branch></menu-branch>
+    <menu-merge></menu-merge>
+    <menu-createpatch></menu-createpatch>
+    <menu-applypatch></menu-applypatch>
+    <menu-clean></menu-clean>
+    <none2></none2>
+    <menu-lock>$FILE</menu-lock>
+    <menu-unlock>$FILE</menu-unlock>
+    <menu-properties>$FILE</menu-properties>
+    <menu-revgraph>$FILE</menu-revgraph>
+  </SCM_Additional_Function_Options>
+</SCM_Config>
