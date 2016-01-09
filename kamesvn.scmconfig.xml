@@ -167,6 +167,7 @@
   <SCM_Common_Functions>
     <RefreshAll>Refresh</RefreshAll>
     <AddAll>Add All</AddAll>
+    <CommitAll>Commit All</CommitAll>
     <Revert>Revert</Revert>
     <RevertAll>Revert All</RevertAll>
   </SCM_Common_Functions>
